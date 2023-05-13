@@ -11,11 +11,6 @@ public class Map : Node2D
     public Vector2[] FindPath(Vector2 start, Vector2 goal)
     {
         Vector2[] Path = NavigationNode.GetSimplePath(start, goal);
-        //GD.Print(start, " ", goal);
-        //foreach ( Vector2 p in Path)
-        //{
-        //    GD.Print(p);
-        //}
         return Path;
     }
 }

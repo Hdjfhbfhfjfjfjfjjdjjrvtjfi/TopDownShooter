@@ -1,19 +1,34 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game.csproj", "{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game", "Game.csproj", "{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-	Debug|Any CPU = Debug|Any CPU
-	ExportDebug|Any CPU = ExportDebug|Any CPU
-	ExportRelease|Any CPU = ExportRelease|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportDebug|x86 = ExportDebug|x86
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+		ExportRelease|x86 = ExportRelease|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportDebug|x86.ActiveCfg = ExportDebug|Any CPU
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{1EF4F0A6-EE78-48E1-89F7-7DA7ED4A7DF2}.ExportRelease|x86.ActiveCfg = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47905962-C716-4346-8F17-0EF2EA96210C}
 	EndGlobalSection
 EndGlobal

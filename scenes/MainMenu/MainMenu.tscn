@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/MainMenu/Buttons/Exit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/MainMenu/MainMenu.cs" type="Script" id=3]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = -0.02
+anchor_top = -0.076
+anchor_right = 1.012
+anchor_bottom = 1.013
+margin_left = -0.0199986
+margin_top = 2.204
+margin_right = -0.188049
+margin_bottom = 2.12299
+color = Color( 0.87451, 0.121569, 0.121569, 1 )
+
+[node name="Start" type="Button" parent="."]
+anchor_left = 0.291
+anchor_top = 0.319
+anchor_right = 0.735
+anchor_bottom = 0.386
+margin_left = -0.0590057
+margin_top = 0.248993
+margin_right = -0.0150146
+margin_bottom = -0.194
+text = "Start"
+
+[node name="HighScores" type="Button" parent="."]
+anchor_left = 0.29
+anchor_top = 0.414
+anchor_right = 0.734
+anchor_bottom = 0.48
+margin_left = -0.210022
+margin_top = -0.00601196
+margin_right = -0.166016
+margin_bottom = 0.0799866
+text = "High Scores"
+
+[node name="Exit" parent="." instance=ExtResource( 2 )]
+margin_top = 2.797
+margin_bottom = 2.883
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.126
+anchor_top = 0.21
+anchor_right = 0.908
+anchor_bottom = 0.312
+margin_left = 0.026001
+margin_top = -0.090004
+margin_right = 0.107971
+margin_bottom = -0.0480042
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Top Down Shooter"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Start" to="." method="OnStartPressed"]
+[connection signal="pressed" from="HighScores" to="." method="OnHighScoresPressed"]

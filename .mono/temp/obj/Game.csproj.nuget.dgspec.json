@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Game\\Game.csproj": {}
+    "F:\\GAME\\Game.csproj": {}
   },
   "projects": {
-    "F:\\Game\\Game.csproj": {
+    "F:\\GAME\\Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Game\\Game.csproj",
+        "projectUniqueName": "F:\\GAME\\Game.csproj",
         "projectName": "Game",
-        "projectPath": "F:\\Game\\Game.csproj",
+        "projectPath": "F:\\GAME\\Game.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "F:\\Game\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",

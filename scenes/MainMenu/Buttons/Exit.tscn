@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/MainMenu/Exit.cs" type="Script" id=1]
+
+[node name="Exit" type="Button"]
+anchor_left = 0.29
+anchor_top = 0.507
+anchor_right = 0.734
+anchor_bottom = 0.573
+margin_left = -0.210022
+margin_top = -0.203003
+margin_right = -0.166016
+margin_bottom = -0.117004
+action_mode = 0
+text = "Exit"
+script = ExtResource( 1 )
+
+[connection signal="button_down" from="." to="." method="OnExitButtonDown"]

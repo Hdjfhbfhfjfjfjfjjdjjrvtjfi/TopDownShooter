@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Level/Spawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Level/Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Level/Map.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Level/Enemy/PistolShootingEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/Level/Label.cs" type="Script" id=5]
+[ext_resource path="res://scenes/Level/Enemy/MeelEnemy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/Level/Level.cs" type="Script" id=7]
+[ext_resource path="res://scenes/Level/Enemy/ShotgunShootingEnemy.tscn" type="PackedScene" id=8]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="Map" parent="." instance=ExtResource( 3 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 4.0
+margin_right = 218.0
+margin_bottom = 103.0
+script = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 390, 240 )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Spawner" parent="." instance=ExtResource( 1 )]
+MeelEnemy = ExtResource( 6 )
+PistolShootingEnemy = ExtResource( 4 )
+ShotgunShootingEnemy = ExtResource( 8 )
+
+[connection signal="Killed" from="Player" to="." method="OnPlayerKilled"]
+[connection signal="UpdateCountOfWaves" from="Spawner" to="Label" method="UpdateCountOfWaves"]

@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GAME\\Game.csproj",
+      "projectUniqueName": "F:\\Game\\Game.csproj",
       "projectName": "Game",
-      "projectPath": "F:\\GAME\\Game.csproj",
+      "projectPath": "F:\\Game\\Game.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "F:\\Game\\.mono\\temp\\obj\\",
       "projectStyle": "PackageReference",

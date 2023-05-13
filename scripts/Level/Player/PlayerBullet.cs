@@ -6,6 +6,6 @@ public class PlayerBullet : AbstractBullet
 
     public override void _PhysicsProcess(float delta)
     {
-        Move<IEnemy>(delta);
+        Move<Enemy>(delta);
     }
 }

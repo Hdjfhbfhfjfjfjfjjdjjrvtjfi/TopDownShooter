@@ -1,18 +1,16 @@
 using Godot;
-using System;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Xml.Linq;
 
 public class Player : KinematicBody2D
 {
     [Signal]
     public delegate void Hit(int damage);
+    [Signal]
+    public delegate void Killed();
     [Export]
     private PackedScene Bullet { get; set;  }
     [Export]
     private float Speed { get; set; }
+    [Export]
     private int Health { get; set; }
     private State state { get; set; }
     private AnimatedSprite Animation { get; set; }
@@ -116,8 +114,7 @@ public class Player : KinematicBody2D
         Health -= damage;
         if (Health <= 0)
         {
-            QueueFree();
-            GetTree().Quit();
+            EmitSignal("Killed");
         }
     }
     private Vector2 GetVelocity()
@@ -163,7 +160,7 @@ public class Player : KinematicBody2D
         PlayerBullet bulletInstance = Bullet.Instance<PlayerBullet>();
         bulletInstance.Position = Position + Direction * 8;
         bulletInstance.init(Direction);
-        GetNode<Node>("../.").AddChild(bulletInstance);
+        GetParent<Node>().AddChild(bulletInstance);
         
     }
 }
