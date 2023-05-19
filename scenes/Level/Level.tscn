@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scenes/Level/Spawner.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Level/Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/Level/Enemy/MeelEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/Level/Level.cs" type="Script" id=7]
 [ext_resource path="res://scenes/Level/Enemy/ShotgunShootingEnemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/Level/Player/Health.cs" type="Script" id=9]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 7 )
@@ -31,5 +32,13 @@ MeelEnemy = ExtResource( 6 )
 PistolShootingEnemy = ExtResource( 4 )
 ShotgunShootingEnemy = ExtResource( 8 )
 
+[node name="Health" type="Label" parent="."]
+margin_left = 777.0
+margin_top = 11.0
+margin_right = 817.0
+margin_bottom = 25.0
+script = ExtResource( 9 )
+
+[connection signal="Hit" from="Player" to="Health" method="OnPlayerHit"]
 [connection signal="Killed" from="Player" to="." method="OnPlayerKilled"]
 [connection signal="UpdateCountOfWaves" from="Spawner" to="Label" method="UpdateCountOfWaves"]

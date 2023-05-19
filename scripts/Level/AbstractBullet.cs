@@ -15,19 +15,15 @@ public class AbstractBullet : KinematicBody2D
     }
     public override void _PhysicsProcess(float delta)
     {
-
+        Move(delta);
     }
 
-    protected void Move<EnemyClass>(float delta)
+    protected void Move(float delta)
     {
         Vector2 velocity = Direction * Speed * delta;
         KinematicCollision2D collision = MoveAndCollide(velocity);
         if (collision != null)
         {
-            if (collision.Collider is EnemyClass)
-            {
-                collision.Collider.EmitSignal("Hit", new object[1] { Damage });
-            }
             QueueFree();
         }
         else
@@ -35,4 +31,5 @@ public class AbstractBullet : KinematicBody2D
             Position += velocity;
         }
     }
+    
 }

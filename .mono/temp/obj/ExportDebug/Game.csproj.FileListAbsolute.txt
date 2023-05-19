@@ -1,0 +1,9 @@
+F:\Game\.mono\temp\bin\ExportDebug\Game.dll
+F:\Game\.mono\temp\bin\ExportDebug\Game.pdb
+F:\Game\.mono\temp\obj\ExportDebug\Game.csproj.AssemblyReference.cache
+F:\Game\.mono\temp\obj\ExportDebug\Game.GeneratedMSBuildEditorConfig.editorconfig
+F:\Game\.mono\temp\obj\ExportDebug\Game.AssemblyInfoInputs.cache
+F:\Game\.mono\temp\obj\ExportDebug\Game.AssemblyInfo.cs
+F:\Game\.mono\temp\obj\ExportDebug\Game.csproj.CoreCompileInputs.cache
+F:\Game\.mono\temp\obj\ExportDebug\Game.dll
+F:\Game\.mono\temp\obj\ExportDebug\Game.pdb

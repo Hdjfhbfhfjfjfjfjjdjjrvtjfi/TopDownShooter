@@ -7,3 +7,5 @@ F:\Game\.mono\temp\obj\Debug\Game.AssemblyInfo.cs
 F:\Game\.mono\temp\obj\Debug\Game.csproj.CoreCompileInputs.cache
 F:\Game\.mono\temp\obj\Debug\Game.dll
 F:\Game\.mono\temp\obj\Debug\Game.pdb
+F:\Game\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+F:\Game\.mono\temp\obj\Debug\Game.csproj.CopyComplete

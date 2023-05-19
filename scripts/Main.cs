@@ -6,18 +6,34 @@ public class Main : Node
     private PackedScene LevelScene { get; set; }
     [Export]
     private PackedScene HighScoresScene { get; set; }
-    private const string HighScoresDataPath = "res://highscores.save";
+    private const string HighScoresDataPath = "res://High_scores.save";
+    private HTTPRequest HttpModule { get; set; }
     private CanvasLayer Canvas { get; set; }
     public override void _Ready()
     {
+        File file = new File();
+        if (!file.FileExists(HighScoresDataPath))
+        {
+            file.Open(HighScoresDataPath, File.ModeFlags.WriteRead);
+            file.StoreVar(new int[5] { 0, 0, 0, 0, 0 });
+        }
+        file.Close();
         Canvas = GetNode<CanvasLayer>("MainMenu");
+        HttpModule = GetNode<HTTPRequest>("HTTPRequest");
     }
     public void HighScoresScreen()
+    {
+        HttpModule.GetData();
+    }
+    public void OnHTTPRequestReturnData(int[] data)
     {
         HighScores HighScoresInstance = HighScoresScene.Instance<HighScores>();
         HighScoresInstance.Connect(nameof(HighScores.ExitFromHighScoresScreen), this, nameof(OnExitHighScoreScreen));
         HighScoresInstance.Name = "HighScores";
+        HighScoresInstance.Hide();
         AddChild(HighScoresInstance);
+        HighScoresInstance.init(data);
+        HighScoresInstance.Show();
     }
     public void Start()
     {
@@ -34,20 +50,7 @@ public class Main : Node
     }
     public void OnPlayerKilled(int CountOfWaves)
     {
-        File file = new File();
-        file.Open(HighScoresDataPath, File.ModeFlags.Read);
-        int[] scores = (int[])file.GetVar();
-        for (int i = 0; i < scores.Length; i++)
-        {
-            if (CountOfWaves > scores[i])
-            {
-                scores[i] = CountOfWaves;
-                break;
-            }
-        }
-        file.Open(HighScoresDataPath, File.ModeFlags.Write);
-        file.StoreVar(scores);
-        file.Close();
+        HttpModule.SetData(CountOfWaves);
         GetNode<Level>("Level").QueueFree();
         Canvas.Show();
     }

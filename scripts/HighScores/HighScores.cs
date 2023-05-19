@@ -1,17 +1,20 @@
 using Godot;
+using System.ComponentModel;
+using System.Linq;
 
 public class HighScores : CanvasLayer
 {
     [Signal]
     public delegate void ExitFromHighScoresScreen();
-    private const string HighScoresDataPath = "res://highscores.save";
-    public override void _Ready()
+    public void init(int[] data)
     {
-        File file = new File();
-        file.Open(HighScoresDataPath, File.ModeFlags.ReadWrite);
-        int[] scores = (int[]) file.GetVar();
-        file.Close();
-        foreach (Score label in GetNode("ScoreLabels").GetChildren())
+        int[] scores = new int[data.Length];
+        for (int i = 0; i < scores.Length; i++)
+        {
+            scores[i] = data[i];
+        }
+
+        foreach ( Score label in GetNode("ScoreLabels").GetChildren())
         {
             label.Text += scores[label.Number].ToString();
         }

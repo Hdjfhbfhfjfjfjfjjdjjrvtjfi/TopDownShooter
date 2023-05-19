@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "10EqVOVRp5wZYpa5amlXKPwcO7Tcas351DtriWkyYiVoAOSXz2YiwFpLeQV1bP6BUpjZceVdXft3ujPOQf9ZzA==",
+  "dgSpecHash": "GOMjgSHKRrwyxQciQh9YfY0lpgSrRdc3KXfleFY8dAfWYHiKsZk/sxxrE4WGdcnCEyal7AJv5TUfZKdQ6La6yg==",
   "success": true,
-  "projectFilePath": "F:\\GAME\\Game.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Game\\Game.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

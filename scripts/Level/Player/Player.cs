@@ -11,7 +11,7 @@ public class Player : KinematicBody2D
     [Export]
     private float Speed { get; set; }
     [Export]
-    private int Health { get; set; }
+    public int Health { get; private set; }
     private State state { get; set; }
     private AnimatedSprite Animation { get; set; }
     private Vector2 OriginDirection { get; set; }

@@ -3,9 +3,12 @@ using System;
 
 public class PlayerBullet : AbstractBullet
 {
-
-    public override void _PhysicsProcess(float delta)
+    public void OnArea2DAreaEntered(Area2D area)
     {
-        Move<Enemy>(delta);
+        if (area.GetParent() is Enemy)
+        {
+            area.GetParent<Enemy>().EmitSignal(nameof(Enemy.Hit), new object[1] { Damage });
+            QueueFree();
+        }
     }
 }

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "F:\\GAME\\Game.csproj": {}
+    "F:\\Game\\Game.csproj": {}
   },
   "projects": {
-    "F:\\GAME\\Game.csproj": {
+    "F:\\Game\\Game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\GAME\\Game.csproj",
+        "projectUniqueName": "F:\\Game\\Game.csproj",
         "projectName": "Game",
-        "projectPath": "F:\\GAME\\Game.csproj",
+        "projectPath": "F:\\Game\\Game.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "F:\\Game\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
@@ -43,6 +43,12 @@
       "frameworks": {
         "net472": {
           "targetAlias": "net472",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
